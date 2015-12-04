@@ -13,7 +13,7 @@ EXPOSE 22
 
 COPY entry.sh /entry.sh
 
-VOLUME ["/root/.ssh"]
+VOLUME ["/root/.ssh/authorized_keys"]
 
 ENTRYPOINT ["/entry.sh"]
 
