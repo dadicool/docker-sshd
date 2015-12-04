@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Andrew Cutler <andrew@panubo.com>
+MAINTAINER Dali Kilani
 
 RUN apk update && \
     apk add bash git openssh rsync && \
@@ -12,6 +12,8 @@ RUN apk update && \
 EXPOSE 22
 
 COPY entry.sh /entry.sh
+
+VOLUME ["/root/.ssh"]
 
 ENTRYPOINT ["/entry.sh"]
 
